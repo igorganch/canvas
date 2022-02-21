@@ -117,8 +117,10 @@ componentDidMount () {
     window.onload=load;
 
 
+    window.addEventListener('orientationchange', doOnOrientationChange);
 
-    window.screen.orientation.addEventListener('change', function() {
+
+ function doOnOrientationChange() {
 
         if(window.matchMedia("(orientation: landscape)").matches){
             canvas.height= vww(40);
@@ -175,7 +177,7 @@ componentDidMount () {
         drawAll();
 
 
-    } );
+    } 
 
     
 
